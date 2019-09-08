@@ -49,7 +49,7 @@ class AutoBrightness:
   def main_loop(self):
 
     syslog.syslog("Starting loop. Waiting for input from sensor.")
-    last_state = False
+    last_state = GPIO.input(self.__port)
 
     while(True):
       current_state = GPIO.input(self.__port)
