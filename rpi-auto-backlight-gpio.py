@@ -70,8 +70,8 @@ class AutoBrightness:
       time.sleep(self.__loopPause); # Sleep for a full second before restarting our loop
 
 
-# Star program by going to main loop.
-syslog.syslog("starting Automatic Bright Adjustement deamon")
-    
-object = AutoBrightness()
-object.main_loop()
+# Start service and go into main loop.
+if __name__ == '__main__':
+  syslog.syslog("starting Automatic Bright Adjustement deamon")
+  object = AutoBrightness()
+  object.main_loop()
